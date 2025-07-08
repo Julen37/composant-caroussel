@@ -1,15 +1,13 @@
 body{
     background-color: #8668a2;
 }
-img{
-    width: 15em;
-}
 #carousselSection{
     background-color: #a07dc1;
     border-radius: 8px;
     width:fit-content;
     display: flex;
     flex-direction: column;
+    width: 15em;
 }
 #btnCaroussel{
     margin: 1em;

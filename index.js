@@ -5,16 +5,17 @@ const arrayImg = [
     "images/PasseMiroirQuatre.jpg"
 ];
 
-var imgSection = document.getElementById("imgCaroussel");
-var btnSection = document.getElementById("btnCaroussel");
+let imgSection = document.getElementById("imgCaroussel");
+let btnSection = document.getElementById("btnCaroussel");
 
-imgSection.src = arrayImg[0]; //mettre la source de l'image le premier index de base du tableau pour quelle s'affiche en premier
+index = 0;
+imgSection.src = arrayImg[index]; //mettre la source de l'image le premier index de base du tableau pour quelle s'affiche en premier
 
-var clickable = document.getElementById("btnCaroussel").onclick = function(){
-    for (i=0 ; i < arrayImg.length ; i++){
-        imgSection.src = arrayImg[i]; // pour mettre la prochaine image dans la src 
-    // i % 4; //pour que ca se remette a 0 a la fin quand ca arrive a i=4 a verifier si c'est pas 3 vu qu'il y a 4 images mais de l'index de 0 a 3
-    };
+btnSection.onclick = function(){
+    imgSection.src = arrayImg[index + 1] ;
+    return index += 1; // pour mettre la prochaine image dans la src 
+        //  % arrayImg.length; //pour que ca se remette a 0 a la fin quand ca arrive a la longueur du tableau
+    
 };
 
 //je veux prendre l'emplacement de l'image
